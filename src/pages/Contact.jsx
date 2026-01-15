@@ -43,6 +43,141 @@ function Contact() {
           </p>
         </div>
       </section>
+
+      <section className="bg-[#FEF7EF] px-5 py-10 md:px-[80px] md:py-[60px]">
+        <div className="mx-auto max-w-7xl">
+          {/* GRID */}
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
+            {/* LEFT CONTENT */}
+            <div>
+              <h2 className="text-[26px] font-bold text-[#363636] md:text-[32px]">
+                Get In Touch
+              </h2>
+
+              <p className="mt-3 text-base text-[#555] md:max-w-[520px]">
+                Connect with our experts to discuss your packaging requirements.
+                We’ll help you find the perfect solution tailored to your brand
+                and business needs.
+              </p>
+
+              {/* DETAILS */}
+              <div className="mt-8 space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC] text-[#008232]">
+                    📞
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[#333]">Phone:</p>
+                    <p className="text-sm text-[#555]">080-49894644</p>
+                    <p className="text-sm text-[#555]">+91-8884607600</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC] text-[#008232]">
+                    ✉️
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[#333]">Email:</p>
+                    <p className="text-sm text-[#555]">
+                      info@mishraenterprises.in
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC] text-[#008232]">
+                    ⏰
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[#333]">Timings:</p>
+                    <p className="text-sm text-[#555]">
+                      10:00 AM – 6:00 PM Daily
+                    </p>
+                    <p className="text-sm text-[#555]">Sunday Holiday</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC] text-[#008232]">
+                    📍
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[#333]">Location:</p>
+                    <p className="max-w-[420px] text-sm text-[#555]">
+                      No. 7, Halgevadarahalli, BEML Complex Road, Rajarajeshwari
+                      Nagar, Bangalore – 560098, Karnataka, India
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT FORM */}
+            <div className="rounded bg-[#0E1524] p-6 shadow-lg md:p-8">
+              <h3 className="text-xl font-bold text-white">Leave A Message</h3>
+
+              <p className="mt-1 text-sm text-gray-300">
+                Tell us what you need, and we’ll be in touch soon.
+              </p>
+
+              <form className="mt-6 space-y-4">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="rounded border border-gray-600 bg-transparent px-4 py-3 text-sm text-white outline-none focus:border-[#0568A4]"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="rounded border border-gray-600 bg-transparent px-4 py-3 text-sm text-white outline-none focus:border-[#0568A4]"
+                  />
+                </div>
+
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                  <input
+                    type="text"
+                    placeholder="Phone Number"
+                    className="rounded border border-gray-600 bg-transparent px-4 py-3 text-sm text-white outline-none focus:border-[#0568A4]"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Subject"
+                    className="rounded border border-gray-600 bg-transparent px-4 py-3 text-sm text-white outline-none focus:border-[#0568A4]"
+                  />
+                </div>
+
+                <textarea
+                  rows="4"
+                  placeholder="Tell us what you're looking for..."
+                  className="w-full rounded border border-gray-600 bg-transparent px-4 py-3 text-sm text-white outline-none focus:border-[#0568A4]"
+                />
+
+                <button
+                  type="button"
+                  className="mt-2 w-full rounded bg-[#008232] py-3 text-sm font-semibold text-white transition hover:bg-[#006c29]"
+                >
+                  Submit Button
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full">
+        <div className="h-[300px] w-full md:h-[450px]">
+          <iframe
+            title="Mishra Enterprises Location"
+            src="https://www.google.com/maps?ll=12.920497,77.514842&z=10&t=m&hl=en-IN&gl=US&mapclient=embed&cid=3364320831870498227&output=embed"
+            className="h-full w-full border-0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </section>
+
       <Footer />
     </>
   );

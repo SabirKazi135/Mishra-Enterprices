@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
+import faq from '../assets/images/faq.png';
 
 function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -54,6 +55,45 @@ function FAQ() {
 
   return (
     <>
+      <section
+        className="hidden h-[600px] w-full grid-cols-2 place-items-center items-center bg-cover bg-center px-40 md:block md:grid"
+        style={{ backgroundImage: `url(${faq})` }}
+      >
+        <div className="flex h-[200px] w-[473px] items-center justify-center rounded-[10px] bg-[#141241] px-5 py-16 shadow-md">
+          <h2 className="mx-auto flex h-10 items-center justify-center text-[40px] font-bold text-white">
+            FAQ
+          </h2>
+        </div>
+        <div>
+          <p className="mb-[14px] text-xl font-light leading-[30px] text-white">
+            We simplify your packaging journey with clarity, expertise, and
+            commitment. From understanding your needs to providing tailored
+            solutions, our team ensures every question is answered and every
+            detail is handled with care — helping you make confident, informed
+            decisions for your brand.
+          </p>
+        </div>
+      </section>
+
+      <section className="md:hidden">
+        <div className="flex items-center justify-center bg-white px-5 py-10">
+          <h2 className="mx-auto flex w-full items-center justify-center text-[26px] font-semibold text-[#363636]">
+            Contact Us
+          </h2>
+        </div>
+        <div
+          className="bg-cover bg-center p-5"
+          style={{ backgroundImage: `url(${faq})` }}
+        >
+          <p className="mb-[14px] text-base font-light leading-[24px] text-white">
+            We simplify your packaging journey with clarity, expertise, and
+            commitment. From understanding your needs to providing tailored
+            solutions, our team ensures every question is answered and every
+            detail is handled with care — helping you make confident, informed
+            decisions for your brand.
+          </p>
+        </div>
+      </section>
       <section className="min-h-screen bg-white px-4 py-12 md:px-12 md:py-20">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
