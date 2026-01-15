@@ -59,7 +59,10 @@ function Services() {
             Services
           </h2>
         </div>
-        <div className="p-5" style={{ backgroundImage: `url(${bg2})` }}>
+        <div
+          className="bg-cover bg-center p-5"
+          style={{ backgroundImage: `url(${bg2})` }}
+        >
           <p className="mb-[14px] text-base font-light leading-[24px] text-white">
             We turn your packaging vision into reality with innovation, care,
             and excellence. From design to delivery, we create reliable,
