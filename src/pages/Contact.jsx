@@ -111,38 +111,54 @@ function Contact() {
           <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
             {/* LEFT CONTENT */}
             <div className="w-full">
-              <h2 className="text-[26px] font-bold text-[#363636] md:text-[32px]">
+              <h2 className="text-[26px] font-bold text-[#363636] md:text-[40px]">
                 Get In Touch
               </h2>
 
-              <p className="mt-3 text-base text-[#555] md:max-w-[520px]">
+              <p className="mt-3 text-base text-[#555] md:text-[20px]">
                 Connect with our experts to discuss your packaging requirements.
                 We’ll help you find the perfect solution tailored to your brand
                 and business needs.
               </p>
 
               {/* DETAILS */}
-              <div className="mt-8 space-y-6">
+              <div className="mt-8 grid items-baseline gap-6 md:grid-cols-2">
                 {/* PHONE */}
                 <div className="flex items-start gap-4">
-                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC]">
-                    <img src={p1} alt="Phone" className="size-[20px]" />
+                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC] md:size-[50px]">
+                    <img
+                      src={p1}
+                      alt="Phone"
+                      className="size-[20px] md:size-[30px]"
+                    />
                   </div>
                   <div>
-                    <p className="font-semibold text-[#333]">Phone:</p>
-                    <p className="text-sm text-[#555]">080-49894644</p>
-                    <p className="text-sm text-[#555]">+91-8884607600</p>
+                    <p className="font-semibold text-[#333] md:text-[26px] md:font-bold">
+                      Phone:
+                    </p>
+                    <p className="text-sm text-[#555] md:text-lg">
+                      080-49894644
+                    </p>
+                    <p className="text-sm text-[#555] md:text-lg">
+                      +91-8884607600
+                    </p>
                   </div>
                 </div>
 
                 {/* EMAIL */}
                 <div className="flex items-start gap-4">
-                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC]">
-                    <img src={p2} alt="Email" className="size-[20px]" />
+                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC] md:size-[50px]">
+                    <img
+                      src={p2}
+                      alt="Email"
+                      className="size-[20px] md:size-[30px]"
+                    />
                   </div>
                   <div>
-                    <p className="font-semibold text-[#333]">Email:</p>
-                    <p className="text-sm text-[#555]">
+                    <p className="font-semibold text-[#333] md:text-[26px] md:font-bold">
+                      Email:
+                    </p>
+                    <p className="text-sm text-[#555] md:text-lg">
                       info@mishraenterprises.in
                     </p>
                   </div>
@@ -150,26 +166,40 @@ function Contact() {
 
                 {/* TIMINGS */}
                 <div className="flex items-start gap-4">
-                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC]">
-                    <img src={p3} alt="Timings" className="size-[20px]" />
+                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC] md:size-[50px]">
+                    <img
+                      src={p3}
+                      alt="Timings"
+                      className="size-[20px] md:size-[30px]"
+                    />
                   </div>
                   <div>
-                    <p className="font-semibold text-[#333]">Timings:</p>
-                    <p className="text-sm text-[#555]">
+                    <p className="font-semibold text-[#333] md:text-[26px] md:font-bold">
+                      Timings:
+                    </p>
+                    <p className="text-sm text-[#555] md:text-lg">
                       10:00 AM – 6:00 PM Daily
                     </p>
-                    <p className="text-sm text-[#555]">Sunday Holiday</p>
+                    <p className="text-sm text-[#555] md:text-lg">
+                      Sunday Holiday
+                    </p>
                   </div>
                 </div>
 
                 {/* LOCATION */}
                 <div className="flex items-start gap-4">
-                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC]">
-                    <img src={p4} alt="Location" className="size-[20px]" />
+                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC] md:size-[50px]">
+                    <img
+                      src={p4}
+                      alt="Location"
+                      className="size-[20px] md:size-[30px]"
+                    />
                   </div>
                   <div>
-                    <p className="font-semibold text-[#333]">Location:</p>
-                    <p className="max-w-[420px] text-sm text-[#555]">
+                    <p className="font-semibold text-[#333] md:text-[26px] md:font-bold">
+                      Location:
+                    </p>
+                    <p className="max-w-[420px] text-sm text-[#555] md:text-lg">
                       No. 7, Halgevadarahalli, BEML Complex Road, Rajarajeshwari
                       Nagar, Bangalore – 560098, Karnataka, India
                     </p>
