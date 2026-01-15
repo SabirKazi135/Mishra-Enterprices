@@ -1,151 +1,51 @@
 import Footer from '../components/Footer';
+import contactImg from '../assets/images/contact.png';
 
 function Contact() {
   return (
     <>
-      
+      <section
+        className="hidden h-[600px] w-full grid-cols-2 place-items-center items-center bg-cover bg-center px-40 md:block md:grid"
+        style={{ backgroundImage: `url(${contactImg})` }}
+      >
+        <div className="flex h-[200px] w-[473px] items-center justify-center rounded-[10px] bg-[#141241] px-5 py-16 shadow-md">
+          <h2 className="mx-auto flex h-10 items-center justify-center text-[40px] font-bold text-white">
+            Contact Us
+          </h2>
+        </div>
+        <div>
+          <p className="mb-[14px] text-xl font-light leading-[30px] text-white">
+            Have a packaging idea or project in mind? We’re here to bring it to
+            life. Whether you need innovative designs, sustainable materials, or
+            custom packaging solutions, our team is ready to help. Get in touch
+            with us today — let’s create packaging that protects, impresses, and
+            represents your brand perfectly.
+          </p>
+        </div>
+      </section>
+
+      <section className="md:hidden">
+        <div className="flex items-center justify-center bg-white px-5 py-10">
+          <h2 className="mx-auto flex w-full items-center justify-center text-[26px] font-semibold text-[#363636]">
+            Contact Us
+          </h2>
+        </div>
+        <div
+          className="bg-cover bg-center p-5"
+          style={{ backgroundImage: `url(${contactImg})` }}
+        >
+          <p className="mb-[14px] text-base font-light leading-[24px] text-white">
+            Have a packaging idea or project in mind? We’re here to bring it to
+            life. Whether you need innovative designs, sustainable materials, or
+            custom packaging solutions, our team is ready to help. Get in touch
+            with us today — let’s create packaging that protects, impresses, and
+            represents your brand perfectly.
+          </p>
+        </div>
+      </section>
       <Footer />
     </>
   );
 }
 
 export default Contact;
-
-
-{/* <section className="min-h-screen bg-white px-4 py-12 md:px-12 md:py-20">
-  <div className="mx-auto max-w-4xl">
-    <div className="mb-12 text-center">
-      <h1 className="mb-4 text-4xl font-bold text-[#363636] md:text-5xl">
-        Contact Us
-      </h1>
-      <p className="text-lg text-gray-600">
-        Get in touch with us for all your packaging needs
-      </p>
-    </div>
-
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
- 
-      <div className="space-y-6">
-        <div>
-          <h2 className="mb-4 text-2xl font-bold text-[#363636]">
-            Get in Touch
-          </h2>
-          <div className="space-y-4">
-            <div>
-              <h3 className="font-semibold text-[#0568A4]">Phone</h3>
-              <p className="text-gray-700">
-                <a
-                  href="tel:08049894644"
-                  className="transition-colors hover:text-[#0568A4]"
-                >
-                  080-49894644
-                </a>
-                <br />
-                <a
-                  href="tel:+918884607600"
-                  className="transition-colors hover:text-[#0568A4]"
-                >
-                  +91-8884607600
-                </a>
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-[#0568A4]">Email</h3>
-              <p className="text-gray-700">
-                <a
-                  href="mailto:info@mishraenterprises.in"
-                  className="transition-colors hover:text-[#0568A4]"
-                >
-                  info@mishraenterprises.in
-                </a>
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-[#0568A4]">Address</h3>
-              <p className="text-gray-700">
-                No. 7, Halgevadarahalli, BEML Complex Road,
-                <br />
-                Rajarajeshwari Nagar, Bangalore – 560098,
-                <br />
-                Karnataka, India
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <h2 className="mb-4 text-2xl font-bold text-[#363636]">
-          Send us a Message
-        </h2>
-        <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-          <div>
-            <label
-              htmlFor="name"
-              className="mb-2 block text-sm font-medium text-gray-700"
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              className="w-full rounded border border-gray-300 px-4 py-2 focus:border-[#0568A4] focus:outline-none focus:ring-2 focus:ring-[#0568A4]"
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="email"
-              className="mb-2 block text-sm font-medium text-gray-700"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              className="w-full rounded border border-gray-300 px-4 py-2 focus:border-[#0568A4] focus:outline-none focus:ring-2 focus:ring-[#0568A4]"
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="phone"
-              className="mb-2 block text-sm font-medium text-gray-700"
-            >
-              Phone
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              className="w-full rounded border border-gray-300 px-4 py-2 focus:border-[#0568A4] focus:outline-none focus:ring-2 focus:ring-[#0568A4]"
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="message"
-              className="mb-2 block text-sm font-medium text-gray-700"
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              required
-              className="w-full rounded border border-gray-300 px-4 py-2 focus:border-[#0568A4] focus:outline-none focus:ring-2 focus:ring-[#0568A4]"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="w-full rounded bg-[#0568A4] px-6 py-3 text-white transition-colors hover:bg-[#045a8c]"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>; */}
