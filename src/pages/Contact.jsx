@@ -1,7 +1,68 @@
 import Footer from '../components/Footer';
 import contactImg from '../assets/images/contact.png';
+import { useState } from 'react';
+import p1 from '../assets/images/p1.png';
+import p2 from '../assets/images/p2.png';
+import p3 from '../assets/images/p3.png';
+import p4 from '../assets/images/p4.png';
 
 function Contact() {
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: '',
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!form.name.trim()) newErrors.name = 'Name is required';
+
+    if (!form.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
+      newErrors.email = 'Invalid email';
+    }
+
+    if (!form.phone.trim()) {
+      newErrors.phone = 'Phone is required';
+    } else if (!/^\d{10}$/.test(form.phone)) {
+      newErrors.phone = 'Enter 10-digit number';
+    }
+
+    if (!form.subject.trim()) newErrors.subject = 'Subject is required';
+    if (!form.message.trim()) newErrors.message = 'Message is required';
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!validateForm()) return;
+
+    console.log('Form Data:', form);
+
+    // reset after submit
+    setForm({
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: '',
+    });
+    setErrors({});
+  };
+
   return (
     <>
       <section
@@ -45,11 +106,11 @@ function Contact() {
       </section>
 
       <section className="bg-[#FEF7EF] px-5 py-10 md:px-[80px] md:py-[60px]">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto">
           {/* GRID */}
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
+          <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
             {/* LEFT CONTENT */}
-            <div>
+            <div className="w-full">
               <h2 className="text-[26px] font-bold text-[#363636] md:text-[32px]">
                 Get In Touch
               </h2>
@@ -62,9 +123,10 @@ function Contact() {
 
               {/* DETAILS */}
               <div className="mt-8 space-y-6">
+                {/* PHONE */}
                 <div className="flex items-start gap-4">
-                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC] text-[#008232]">
-                    📞
+                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC]">
+                    <img src={p1} alt="Phone" className="size-[20px]" />
                   </div>
                   <div>
                     <p className="font-semibold text-[#333]">Phone:</p>
@@ -73,9 +135,10 @@ function Contact() {
                   </div>
                 </div>
 
+                {/* EMAIL */}
                 <div className="flex items-start gap-4">
-                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC] text-[#008232]">
-                    ✉️
+                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC]">
+                    <img src={p2} alt="Email" className="size-[20px]" />
                   </div>
                   <div>
                     <p className="font-semibold text-[#333]">Email:</p>
@@ -85,9 +148,10 @@ function Contact() {
                   </div>
                 </div>
 
+                {/* TIMINGS */}
                 <div className="flex items-start gap-4">
-                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC] text-[#008232]">
-                    ⏰
+                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC]">
+                    <img src={p3} alt="Timings" className="size-[20px]" />
                   </div>
                   <div>
                     <p className="font-semibold text-[#333]">Timings:</p>
@@ -98,9 +162,10 @@ function Contact() {
                   </div>
                 </div>
 
+                {/* LOCATION */}
                 <div className="flex items-start gap-4">
-                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC] text-[#008232]">
-                    📍
+                  <div className="flex size-[40px] items-center justify-center rounded-full bg-[#E6F6EC]">
+                    <img src={p4} alt="Location" className="size-[20px]" />
                   </div>
                   <div>
                     <p className="font-semibold text-[#333]">Location:</p>
@@ -114,51 +179,101 @@ function Contact() {
             </div>
 
             {/* RIGHT FORM */}
-            <div className="rounded bg-[#0E1524] p-6 shadow-lg md:p-8">
+            <div className="w-full rounded bg-[#0E1524] p-6 shadow-lg md:p-8">
               <h3 className="text-xl font-bold text-white">Leave A Message</h3>
 
               <p className="mt-1 text-sm text-gray-300">
                 Tell us what you need, and we’ll be in touch soon.
               </p>
 
-              <form className="mt-6 space-y-4">
+              <form onSubmit={handleSubmit} className="mt-6 space-y-4">
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="rounded border border-gray-600 bg-transparent px-4 py-3 text-sm text-white outline-none focus:border-[#0568A4]"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Your Email"
-                    className="rounded border border-gray-600 bg-transparent px-4 py-3 text-sm text-white outline-none focus:border-[#0568A4]"
-                  />
+                  <div>
+                    <input
+                      type="text"
+                      name="name"
+                      value={form.name}
+                      onChange={handleChange}
+                      placeholder="Your Name"
+                      className="w-full rounded border border-gray-600 bg-transparent px-4 py-3 text-sm text-white outline-none focus:border-[#0568A4]"
+                    />
+                    {errors.name && (
+                      <p className="mt-1 text-xs text-red-400">{errors.name}</p>
+                    )}
+                  </div>
+
+                  <div>
+                    <input
+                      type="email"
+                      name="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      placeholder="Your Email"
+                      className="w-full rounded border border-gray-600 bg-transparent px-4 py-3 text-sm text-white outline-none focus:border-[#0568A4]"
+                    />
+                    {errors.email && (
+                      <p className="mt-1 text-xs text-red-400">
+                        {errors.email}
+                      </p>
+                    )}
+                  </div>
                 </div>
 
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                  <input
-                    type="text"
-                    placeholder="Phone Number"
-                    className="rounded border border-gray-600 bg-transparent px-4 py-3 text-sm text-white outline-none focus:border-[#0568A4]"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Subject"
-                    className="rounded border border-gray-600 bg-transparent px-4 py-3 text-sm text-white outline-none focus:border-[#0568A4]"
-                  />
+                  <div>
+                    <input
+                      type="text"
+                      name="phone"
+                      value={form.phone}
+                      onChange={handleChange}
+                      placeholder="Phone Number"
+                      className="w-full rounded border border-gray-600 bg-transparent px-4 py-3 text-sm text-white outline-none focus:border-[#0568A4]"
+                    />
+                    {errors.phone && (
+                      <p className="mt-1 text-xs text-red-400">
+                        {errors.phone}
+                      </p>
+                    )}
+                  </div>
+
+                  <div>
+                    <input
+                      type="text"
+                      name="subject"
+                      value={form.subject}
+                      onChange={handleChange}
+                      placeholder="Subject"
+                      className="w-full rounded border border-gray-600 bg-transparent px-4 py-3 text-sm text-white outline-none focus:border-[#0568A4]"
+                    />
+                    {errors.subject && (
+                      <p className="mt-1 text-xs text-red-400">
+                        {errors.subject}
+                      </p>
+                    )}
+                  </div>
                 </div>
 
-                <textarea
-                  rows="4"
-                  placeholder="Tell us what you're looking for..."
-                  className="w-full rounded border border-gray-600 bg-transparent px-4 py-3 text-sm text-white outline-none focus:border-[#0568A4]"
-                />
+                <div>
+                  <textarea
+                    rows="4"
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
+                    placeholder="Tell us what you're looking for..."
+                    className="w-full rounded border border-gray-600 bg-transparent px-4 py-3 text-sm text-white outline-none focus:border-[#0568A4]"
+                  />
+                  {errors.message && (
+                    <p className="mt-1 text-xs text-red-400">
+                      {errors.message}
+                    </p>
+                  )}
+                </div>
 
                 <button
-                  type="button"
+                  type="submit"
                   className="mt-2 w-full rounded bg-[#008232] py-3 text-sm font-semibold text-white transition hover:bg-[#006c29]"
                 >
-                  Submit Button
+                  Submit
                 </button>
               </form>
             </div>
@@ -167,7 +282,7 @@ function Contact() {
       </section>
 
       <section className="w-full">
-        <div className="h-[300px] w-full md:h-[450px]">
+        <div className="h-[300px] w-full">
           <iframe
             title="Mishra Enterprises Location"
             src="https://www.google.com/maps?ll=12.920497,77.514842&z=10&t=m&hl=en-IN&gl=US&mapclient=embed&cid=3364320831870498227&output=embed"
