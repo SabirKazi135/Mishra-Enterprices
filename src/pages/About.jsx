@@ -217,15 +217,15 @@ function About() {
       </section> */}
 
       {/* Section 3 */}
-      <section className="bg-[#FEF7EF] px-5 py-10 md:px-16 md:py-16">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 md:grid-cols-[2fr_1fr]">
+      <section className="bg-[#FEF7EF] px-5 py-10 md:p-[50px]">
+        <div className="mx-auto grid w-full grid-cols-1 gap-10 md:grid-cols-[60%_35%] md:place-items-center">
           {/* LEFT COLUMN */}
-          <div>
+          <div className="w-full">
             <div className="space-y-3">
-              <h1 className="text-[28px] font-bold text-[#222] md:text-[34px]">
+              <h1 className="text-[28px] font-bold text-[#222] md:text-[40px]">
                 Innovative Food Packaging
               </h1>
-              <p className="text-base text-[#555] md:text-lg">
+              <p className="text-base text-[#555] md:text-xl">
                 Delivering safe, hygienic, and innovative food packaging
                 solutions designed to preserve freshness, extend shelf life, and
                 enhance your brand’s presentation.
@@ -236,8 +236,7 @@ function About() {
               <ImageSlider images={sliderImages} />
             </div>
 
-            {/* DESKTOP CHECKLIST */}
-            <div className="hidden gap-3 md:grid md:grid-cols-2">
+            <div className="hidden gap-3 md:grid md:grid-cols-2 md:px-5">
               {[
                 'Custom Packaging Design',
                 'Premium Quality Materials',
@@ -248,25 +247,22 @@ function About() {
                 '250,000+ Successful Deliveries',
                 'Guaranteed Customer Satisfaction',
               ].map((text, index) => (
-                <div
-                  key={index}
-                  className="flex items-center text-base text-[#333]"
-                >
+                <div key={index} className="flex items-center">
                   <svg
                     aria-hidden="true"
                     viewBox="0 0 512 512"
                     xmlns="http://www.w3.org/2000/svg"
                     className="mr-[5px]"
-                    style={{ width: '18px', height: '18px', fill: '#008232' }}
+                    style={{ width: '16px', height: '16px', fill: '#008232' }}
                   >
                     <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z" />
                   </svg>
-                  <span>{text}</span>
+                  <span className="text-xl">{text}</span>
                 </div>
               ))}
             </div>
 
-            {/* MOBILE CHECKLIST */}
+            {/* CHECKLIST */}
             <div className="mt-4 px-5 md:hidden">
               {[
                 'Custom Packaging Design',
@@ -284,7 +280,7 @@ function About() {
               ))}
             </div>
 
-            <p className="mt-4 text-base leading-7 text-[#555]">
+            <p className="mt-4 text-base leading-7 text-[#555] md:text-xl">
               Providing reliable, high-quality food packaging that maintains
               product freshness, ensures safety, and elevates your brand’s image
               with every package.
@@ -292,30 +288,30 @@ function About() {
 
             {/* FEATURES */}
             <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-              <div className="space-y-2 text-center md:text-left">
+              <div className="space-y-2 text-center md:text-start">
                 <img src={i1} alt="" className="mx-auto size-[70px] md:mx-0" />
-                <h1 className="text-lg font-semibold text-[#222]">
+                <h1 className="text-lg font-semibold text-[#222] md:text-[26px]">
                   Top Quality
                 </h1>
-                <p className="text-sm text-[#555]">
+                <p className="text-sm text-[#555] md:text-xl md:font-light">
                   Engineered to deliver strength, reliability, and perfection.
                 </p>
               </div>
 
-              <div className="space-y-2 text-center md:text-left">
+              <div className="space-y-2 text-center md:text-start">
                 <img src={i2} alt="" className="mx-auto size-[70px] md:mx-0" />
                 <h1 className="text-lg font-semibold text-[#222]">
                   Modern Design
                 </h1>
-                <p className="text-sm text-[#555]">
+                <p className="text-sm text-[#555] md:text-xl md:font-light">
                   Smart, stylish packaging tailored to your brand.
                 </p>
               </div>
 
-              <div className="space-y-2 text-center md:text-left">
+              <div className="space-y-2 text-center md:text-start">
                 <img src={i3} alt="" className="mx-auto size-[70px] md:mx-0" />
                 <h1 className="text-lg font-semibold text-[#222]">Eco Safe</h1>
-                <p className="text-sm text-[#555]">
+                <p className="text-sm text-[#555] md:text-xl md:font-light">
                   Committed to sustainability with recyclable materials.
                 </p>
               </div>
@@ -323,61 +319,67 @@ function About() {
           </div>
 
           {/* RIGHT COLUMN */}
-          <div>
+          <div className="w-full max-w-full">
             {/* WHAT'S INCLUDED */}
-            <div className="rounded bg-white p-6 shadow-md">
-              <h1 className="mb-4 text-xl font-bold text-[#222]">
+            <div className="grid items-center rounded bg-white p-6 shadow-md md:h-[385px]">
+              <h1 className="mb-4 text-xl font-bold text-[#222] md:text-[26px]">
                 What’s Included
               </h1>
 
-              <div className="space-y-3">
+              <div className="grid space-y-3 md:space-y-6">
                 <div className="flex items-center gap-3 text-sm text-[#333]">
                   <img src={icon1} alt="" className="size-6 md:size-[30px]" />
-                  <p>Precision Cutting</p>
+                  <p className="md:text-[20px]">Precision Cutting</p>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-[#333]">
                   <img src={icon2} alt="" className="size-6 md:size-[30px]" />
-                  <p>On-Time Dispatch</p>
+                  <p className="md:text-[20px]">On-Time Dispatch</p>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-[#333]">
                   <img src={icon3} alt="" className="size-6 md:size-[30px]" />
-                  <p>High-Quality Printing</p>
+                  <p className="md:text-[20px]">High-Quality Printing</p>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-[#333]">
-                  <img src={icon4} alt="" className="size-6 md:size-[30px]" />
+                  <img src={icon4} alt="" className="size-6" />
                   <p>Bulk Packaging (500 pcs)</p>
                 </div>
               </div>
 
-              <button className="mt-4 w-full rounded bg-[#0568A4] py-2 text-white transition hover:bg-[#045a8c]">
+              <button className="mt-4 w-full rounded bg-[#0568A4] py-2 text-white transition hover:bg-[#045a8c] md:text-[20px]">
                 Book Now
               </button>
             </div>
 
             {/* HELP CARD */}
             <div
-              className="mt-6 rounded bg-cover bg-center p-5 text-white"
+              className="mt-6 flex-col items-start justify-center gap-6 rounded bg-cover bg-center p-5 text-white md:flex md:h-[383px]"
               style={{ backgroundImage: `url(${w1})` }}
             >
-              <h1 className="text-xl font-bold">We’re Here to Help</h1>
-              <p className="mt-1 text-sm">
-                Got questions or special requests? Reach out with us anytime
-              </p>
+              <div>
+                <h1 className="text-xl font-bold md:text-[26px]">
+                  We’re Here to Help
+                </h1>
+                <p className="mt-1 text-sm md:text-[16px]">
+                  Got questions or special requests? Reach out with us anytime
+                </p>
+              </div>
 
               <div className="mt-4 flex items-center gap-4">
                 <img src={w2} alt="" className="size-[30px] md:size-[50px]" />
                 <div>
-                  <h1 className="font-semibold">Phone:</h1>
-                  <p>080-49894644,</p>
-                  <p>+91-8073344825</p>
+                  <h1 className="font-semibold md:text-[26px]">Phone:</h1>
+                  <p className="md:text-[16px]">080-49894644,</p>
+                  <p className="md:text-[16px]">+91-8073344825</p>
                 </div>
               </div>
 
               <div className="mt-4 flex items-center gap-4">
                 <img src={w3} alt="" className="size-[30px] md:size-[50px]" />
                 <div>
-                  <h1 className="font-semibold">Email:</h1>
-                  <p>mishraenterprisesblr@gmail.com</p>
+                  <h1 className="font-semibold md:text-[26px]">Email:</h1>
+                  <p className="md:text-[16px]">
+                    mishraenterprisesblr@gmail.com
+                  </p>
                 </div>
               </div>
             </div>
