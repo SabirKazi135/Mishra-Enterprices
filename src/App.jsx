@@ -33,7 +33,7 @@ export default function App() {
           <Route path="/Ai" element={<Ai />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/videos" element={<Videos />} />
-          
+          {/* ADMIN ROUTES (HIDDEN) */}
           <Route path="/admin/login" element={<AdminLogin />} />
 
           <Route
