@@ -12,41 +12,6 @@
   font-family: 'Outfit', sans-serif;
 }
 
-/* .carousel {
-  margin: 100px auto;
-  width: 100%;
-  border: 2px solid red;
-  overflow: hidden;
-}
-
-.track {
-  display: flex;
-  width: max-content;
-  animation: slide 20s linear infinite;
-}
-
-.group {
-  display: flex;
-  gap: 2rem;
-  padding-right: 2rem;
-}
-
-/* IMAGE behaves like card */
-/* .card {
-  flex: 0 0 154px;
-  height: 40px;
-  object-fit: contain;
-}
-
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-} */
-
 .carousel {
   width: 100%;
   overflow: hidden;

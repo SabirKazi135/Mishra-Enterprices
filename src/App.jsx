@@ -12,7 +12,7 @@ import Ai from './pages/Ai';
 import Gallery from './pages/Gallery';
 import Videos from './pages/Videos';
 
-// ADD THESE IMPORTS
+
 import AdminLogin from './admin/pages/AdminLogin';
 import AdminDashboard from './admin/pages/AdminDashboard';
 import AdminRoute from './admin/components/AdminRoute';
@@ -33,7 +33,7 @@ export default function App() {
           <Route path="/Ai" element={<Ai />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/videos" element={<Videos />} />
-          {/* ADMIN ROUTES (HIDDEN) */}
+          
           <Route path="/admin/login" element={<AdminLogin />} />
 
           <Route
