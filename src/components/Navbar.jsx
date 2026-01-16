@@ -154,22 +154,27 @@ function Navbar({ selectedCategory, setSelectedCategory }) {
         </nav>
 
         {/* RIGHT SIDE */}
-        <div className="hidden flex-col items-start gap-1 md:flex">
+        <div className="flex items-center gap-4">
+          {/* DESKTOP PHONE */}
           <a
             href="tel:+918884607600"
-            className="flex items-center gap-2 rounded px-3 py-1 text-sm font-medium text-white transition-colors hover:bg-white hover:text-[#07062B]"
-            aria-label="Call us at +91-8884607600"
+            className="hidden rounded border border-white px-4 py-2 text-white transition-colors hover:bg-white hover:text-[#07062B] md:inline-flex"
+            aria-label="Call us at 88846 07600"
           >
-            📞 +91-8884607600
+            📞 88846 07600
           </a>
 
-          <a
-            href="tel:08049894644"
-            className="flex items-center gap-2 rounded px-3 py-1 text-sm font-medium text-white transition-colors hover:bg-white hover:text-[#07062B]"
-            aria-label="Call us at 080-49894644"
+          {/* MOBILE MENU */}
+          <button
+            className="mr-8 flex w-[45px] flex-col gap-1 rounded border-2 border-white p-2 md:hidden"
+            onClick={() => setIsOpen(true)}
+            aria-label="Open mobile menu"
+            aria-expanded={isOpen}
           >
-            📞 080-49894644
-          </a>
+            <span className="block h-[1px] w-6 bg-white"></span>
+            <span className="block h-[1px] w-6 bg-white"></span>
+            <span className="block h-[1px] w-6 bg-white"></span>
+          </button>
         </div>
       </div>
 
