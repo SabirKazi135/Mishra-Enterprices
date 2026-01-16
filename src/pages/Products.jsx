@@ -136,7 +136,7 @@ function Products() {
 
             {/* CATEGORIES */}
             <div className="w-full space-y-1">
-              {sidebarCategories.map((c) => (
+              {/* {sidebarCategories.map((c) => (
                 <div
                   className="py-[15px] leading-6"
                   key={c.title}
@@ -149,7 +149,29 @@ function Products() {
                   </span>
                   <span className="ml-2 text-base">({c.count})</span>
                 </div>
-              ))}
+              ))} */}
+
+              {sidebarCategories.map((c) => {
+                const isActive =
+                  filter.type === 'category' && filter.value === c.title;
+
+                return (
+                  <div
+                    key={c.title}
+                    onClick={() =>
+                      setFilter({ type: 'category', value: c.title })
+                    }
+                    className={`cursor-pointer py-[15px] leading-6 transition-all duration-100 ${
+                      isActive
+                        ? 'border-l-4 border-[#19299B] pl-4 font-semibold text-[#19299B]'
+                        : 'pl-4 text-[#4B4B4B]'
+                    } `}
+                  >
+                    <span className="text-xl leading-6">{c.title}</span>
+                    <span className="ml-2 text-base">({c.count})</span>
+                  </div>
+                );
+              })}
             </div>
           </aside>
 
